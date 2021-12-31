@@ -1,0 +1,58 @@
+<html>
+    <body background="https://images.pexels.com/photos/9799359/pexels-photo-9799359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+        <br><br><br>
+        <div>
+            <center><img src="https://geekster.in/images/logo.svg" alt="" height="100px"></center>
+        </div>
+        <div>
+            <br><br><br><br>
+            <center><div><h3 style="color: aliceblue;">Geekster Admission Form</h3></div>
+                <div style="border: 1px solid white;"> <br><br><br>
+                    <form action="register.php" >
+                        <div><input type="text" placeholder="First Name" name="fname" required></div><br><br>
+                        <div><input type="text" placeholder="Last Name" name="lname"></div><br><br>
+                        <div><input type="radio" name="sex" value="male" checked>Male <input type="radio" name="sex" value="female">Female</div><br><br>
+                        <div> <label  style="color: white;">Age</label> <input type="range" min="12" max="90" ></div><br><br>
+                        <div>
+                            <select name="course" id="">
+                                <option value="null" selected>Select Course</option>
+                                <option value="java">Java</option>
+                                <option value="python">Python</option>
+                                <option value="javascript">Javascript</option>
+                                <option value="react">React js</option>
+                                <option value="angular">Angular js</option>
+                            </select>
+                        </div><br><br>
+                        <div><label  style="color: white;">Dob &nbsp;</label><input type="date" required ></div><br><br>
+                        <div><input type="email" placeholder="Email" required></div><br><br>
+                        <div><input type="password" id="pass1" placeholder="Password" required minlength="8"></div><br><br>
+                        <div><input type="password" id="pass2"  placeholder="Confirm Password" required minlength="8" ><span id="res"></span></div><br><br>
+                        <div><button type="submit" onclick="func()">Submit</button>
+                            <input type="reset" value="Reset" onclick="reset" ></div><br><br>
+                    </form>
+                </div>
+            </center>
+            </div><br><br><br><br><br>
+
+            <center><div style="background-color: rgb(120, 145, 145);">
+                
+                <div>
+                    <h3>Copyright &copy; are reserved.</h3>
+                </div>
+                <div>Quazi Yadgar Husain</div>
+            </div></center>
+        </div>
+        <script src="">
+            function func()
+            {
+                var pass1 = document.getElementById("pass1");
+                var pass2 = document.getElementById("pass2");
+                if(pass1!=pass2)
+                alert("Password does not match");
+                else
+                alert("registration successful");
+                 
+            }
+        </script>
+    </body>
+</html>
