@@ -8,7 +8,7 @@
             <br><br><br><br>
             <center><div><h3 style="color: aliceblue;">Geekster Admission Form</h3></div>
                 <div style="border: 1px solid white;"> <br><br><br>
-                    <form action="register.php" >
+                    <form onsubmit="func()">
                         <div><input type="text" placeholder="First Name" name="fname" required></div><br><br>
                         <div><input type="text" placeholder="Last Name" name="lname"></div><br><br>
                         <div><input type="radio" name="sex" value="male" checked>Male <input type="radio" name="sex" value="female">Female</div><br><br>
@@ -27,7 +27,7 @@
                         <div><input type="email" placeholder="Email" required></div><br><br>
                         <div><input type="password" id="pass1" placeholder="Password" required minlength="8"></div><br><br>
                         <div><input type="password" id="pass2"  placeholder="Confirm Password" required minlength="8" ><span id="res"></span></div><br><br>
-                        <div><button type="submit" onclick="func()">Submit</button>
+                        <div><button type="submit">Submit</button>
                             <input type="reset" value="Reset" onclick="reset" ></div><br><br>
                     </form>
                 </div>
@@ -42,11 +42,11 @@
                 <div>Quazi Yadgar Husain</div>
             </div></center>
         </div>
-        <script src="">
+        <script>
             function func()
             {
-                var pass1 = document.getElementById("pass1");
-                var pass2 = document.getElementById("pass2");
+                var pass1 = document.getElementById("pass1").value;
+                var pass2 = document.getElementById("pass2").value;
                 if(pass1!=pass2)
                 alert("Password does not match");
                 else
